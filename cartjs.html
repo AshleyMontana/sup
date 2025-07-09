@@ -1,0 +1,8 @@
+// cart.js - handles adding games to localStorage cart
+
+function addToCart(game) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push(game);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${game.name} has been added to your cart.`);
+}
